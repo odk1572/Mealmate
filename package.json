@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "mealmate backend",
+  "license": "ISC",
+  "author": "odk",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon Backend/server.js",
+    "dev": "nodemon .",
+    "start": "node Backend/server.js",
+   "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend && npm install --prefix Admin && npm run build --prefix Admin"
+
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.9",
+    "stripe": "^17.5.0",
+    "validator": "^13.12.0"
+  }
+}
