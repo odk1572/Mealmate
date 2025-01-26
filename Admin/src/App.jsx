@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import AddPage from "./pages/AddPage";
 import ListPage from "./pages/listPage";
-import {OrderPage} from "./pages/orderPage";
+import OrderPage from "./pages/OrderPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
