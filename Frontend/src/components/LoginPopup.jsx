@@ -41,7 +41,7 @@ const LoginPopup = ({ setShowLogin }) => {
     <div className="absolute z-10 w-full h-full bg-[#00000090] grid place-items-center">
       <form
         onSubmit={onLogin}
-        className="flex flex-col gap-6 px-6 py-8 border rounded-lg bg-orange-100 w-96"
+        className="flex flex-col gap-6 px-6 py-8 border rounded-lg bg-orange-100 w-96 dark:bg-gray-800"
       >
         {/* Logo - Centered and Slightly Bigger */}
         <div className="flex justify-center mb-6">
@@ -67,11 +67,11 @@ const LoginPopup = ({ setShowLogin }) => {
         </div>
 
         <div className="flex justify-between items-center">
-          <h2 className="font-bold text-3xl text-orange-600">{currentState}</h2>
+          <h2 className="font-bold text-3xl text-orange-600 dark:text-orange-400">{currentState}</h2>
           {/* Replace the img tag with React Icon */}
           <FaTimes
             onClick={() => setShowLogin(false)}
-            className="text-xl cursor-pointer"
+            className="text-xl cursor-pointer text-black dark:text-white"
           />
         </div>
 
@@ -82,7 +82,7 @@ const LoginPopup = ({ setShowLogin }) => {
               placeholder="Name"
               required
               name="name"
-              className="p-2 border-2 border-orange-500 rounded-md text-center"
+              className="p-2 border-2 border-orange-500 rounded-md text-center dark:text-black dark:bg-gray-600"
               onChange={(e) =>
                 setUserData({ ...userData, name: e.target.value })
               }
@@ -93,7 +93,7 @@ const LoginPopup = ({ setShowLogin }) => {
             placeholder="Email"
             required
             name="email"
-            className="p-2 border-2 border-orange-500 rounded-md text-center"
+            className="p-2 border-2 border-orange-500 rounded-md text-center dark:text-black dark:bg-gray-600"
             onChange={(e) =>
               setUserData({ ...userData, email: e.target.value })
             }
@@ -103,14 +103,14 @@ const LoginPopup = ({ setShowLogin }) => {
             placeholder="Password"
             required
             name="password"
-            className="p-2 border-2 border-orange-500 rounded-md text-center"
+            className="p-2 border-2 border-orange-500 rounded-md text-center dark:text-black dark:bg-gray-600"
             onChange={(e) =>
               setUserData({ ...userData, password: e.target.value })
             }
           />
         </div>
 
-        <div className="flex gap-2 font-bold my-4">
+        <div className="flex gap-2 font-bold my-4 text-black dark:text-white">
           <input type="checkbox" required />
           <p>
             By continuing, I agree to the terms of the use and privacy policy.
@@ -119,18 +119,18 @@ const LoginPopup = ({ setShowLogin }) => {
 
         <button
           type="submit"
-          className="text-base w-full px-3 py-2 border-2 border-solid bg-orange-300 border-orange-500 rounded-xl hover:bg-orange-600 hover:text-white"
+          className="text-base w-full px-3 py-2 border-2 border-solid bg-orange-300 border-orange-500 rounded-xl hover:bg-orange-600 hover:text-white dark:bg-gray-700 dark:border-gray-500 dark:hover:bg-gray-600 dark:hover:text-white"
         >
           {currentState === "Sign Up" ? "Create Account" : "Login"}
         </button>
 
-        <div className="mt-4 text-center">
+        <div className="mt-4 text-center text-black dark:text-white">
           {currentState === "Sign Up" ? (
             <p>
               Already have an account?{" "}
               <span
                 onClick={() => switchState("Login")}
-                className="cursor-pointer text-orange-600 font-semibold"
+                className="cursor-pointer text-orange-600 font-semibold dark:text-orange-400"
               >
                 Click here.
               </span>
@@ -140,7 +140,7 @@ const LoginPopup = ({ setShowLogin }) => {
               Don't have an account?{" "}
               <span
                 onClick={() => switchState("Sign Up")}
-                className="cursor-pointer text-orange-600 font-semibold"
+                className="cursor-pointer text-orange-600 font-semibold dark:text-orange-400"
               >
                 Create account.
               </span>
