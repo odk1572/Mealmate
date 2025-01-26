@@ -139,7 +139,7 @@ const LoginPopup = ({ setShowLogin }) => {
             <p>
               Don't have an account?{" "}
               <span
-                onClick={() => switchState("Sign Up")}
+                onClick={() => switchState("register")}
                 className="cursor-pointer text-orange-600 font-semibold dark:text-orange-400"
               >
                 Create account.
